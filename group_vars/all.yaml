@@ -1,11 +1,12 @@
 ansible_user: ec2-user
 ansible_password: DevOps321
-MONGODB_HOST: mongodb-dev.dawsrs.online
-CATALOGUE_HOST: catalogue-dev.dawsrs.online
-REDIS_HOST: redis-dev.dawsrs.online
-USER_HOST: user-dev.dawsrs.online
-CART_HOST: cart-dev.dawsrs.online
-MYSQL_HOST: mysql-dev.dawsrs.online
-SHIPPING_HOST: shipping-dev.dawsrs.online
-RABBITMQ_HOST: rabbitmq-dev.dawsrs.online
-PAYMENT_HOST: payment-dev.dawsrs.online
+MONGODB_HOST: mongodb-{{ env }}.dawsrs.online
+REDIS_HOST: redis-{{ env }}.dawsrs.online
+MYSQL_HOST: mysql-{{ env }}.dawsrs.online
+RABBITMQ_HOST: rabbitmq-{{ env }}.dawsrs.online
+CATALOGUE_HOST: catalogue.backend-alb-{{ env }}.dawsrs.online
+USER_HOST: user.backend-alb-{{ env }}.dawsrs.online
+CART_HOST: cart.backend-alb-{{ env }}.dawsrs.online
+SHIPPING_HOST: shipping.backend-alb-{{ env }}.dawsrs.online
+PAYMENT_HOST: payment.backend-alb-{{ env }}.dawsrs.online
+app_version: v3
